@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;700&display=swap');
 
+/* VARIABLES DE COLOR - Solo editamos esto para cambiar la vibra */
+:root {
+    --color-principal: #7b2cbf;       /* Morado Real */
+    --color-hover: #5a189a;           /* Morado Profundo */
+    --color-fondo-app: #f3e5f5;       /* Lavanda muy claro */
+    --color-tarjetas: #ffffff;        /* Blanco puro */
+    --color-acento: #9d4edd;          /* Violeta brillante */
+    --color-texto: #240046;           /* Morado casi negro */
+    --color-borde: #e1bee7;           /* Lila suave para bordes */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +19,8 @@
 
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: #fff5f7;
-    color: #333;
+    background-color: var(--color-fondo-app);
+    color: var(--color-texto);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,12 +28,12 @@ body {
 }
 
 header {
-    background-color: #ff4d6d;
+    background-color: var(--color-principal);
     color: white;
     width: 100%;
     text-align: center;
     padding: 2.5rem 1rem;
-    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+    box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
 }
 
 h1 {
@@ -32,7 +43,7 @@ h1 {
 }
 
 #upload-section, #coupons-section {
-    background: white;
+    background: var(--color-tarjetas);
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
@@ -46,12 +57,12 @@ input, button {
     margin-top: 12px;
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #ffe5ec;
+    border: 1px solid var(--color-borde);
     font-family: 'Quicksand', sans-serif;
 }
 
 #btn-upload {
-    background-color: #ff4d6d;
+    background-color: var(--color-principal);
     color: white;
     border: none;
     font-weight: bold;
@@ -60,11 +71,11 @@ input, button {
 }
 
 #btn-upload:hover {
-    background-color: #c9184a;
+    background-color: var(--color-hover);
     transform: scale(1.02);
 }
 
-/* --- ESTILO CUPONES --- */
+/* --- CUPONES --- */
 .coupons-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -73,9 +84,9 @@ input, button {
 }
 
 .coupon {
-    background-color: #fff0f3;
-    color: #ff4d6d;
-    border: 2px dashed #ffb3c1;
+    background-color: #f8f0fc;
+    color: var(--color-principal);
+    border: 2px dashed var(--color-acento);
     padding: 15px;
     font-weight: bold;
     cursor: pointer;
@@ -84,7 +95,7 @@ input, button {
 }
 
 .coupon:hover:not(:disabled) {
-    background-color: #ff4d6d;
+    background-color: var(--color-principal);
     color: white;
     transform: translateY(-3px);
 }
@@ -100,7 +111,7 @@ input, button {
 #btn-reset-coupons {
     background: none;
     border: none;
-    color: #ffb3c1;
+    color: var(--color-acento);
     font-size: 0.7rem;
     cursor: pointer;
     margin-top: 15px;
@@ -118,8 +129,8 @@ input, button {
 
 .custom-file-upload {
     background-color: #ffffff;
-    color: #ff4d6d;
-    border: 2px solid #ff4d6d;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
     padding: 10px;
     border-radius: 15px;
     cursor: pointer;
@@ -136,7 +147,7 @@ input, button {
     max-height: 250px;
     overflow: hidden;
     border-radius: 15px;
-    border: 2px solid #ffb3c1;
+    border: 2px solid var(--color-acento);
     display: none;
 }
 
@@ -156,15 +167,15 @@ input, button {
 
 .post img { width: 100%; }
 .post-info { padding: 15px; }
-.date { font-size: 0.8rem; color: #ff758f; font-weight: bold; }
+.date { font-size: 0.8rem; color: var(--color-acento); font-weight: bold; }
 
 .btn-eliminar {
     position: absolute;
     top: 10px;
     right: 10px;
     background: white;
-    color: #ff4d6d;
-    border: 1px solid #ff4d6d;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
     border-radius: 50%;
     width: 30px;
     height: 30px;
