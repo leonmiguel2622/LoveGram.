@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveGram - Nuestro Diario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>❤️ Juntos por el Mundo</h1>
+        <div id="counter-container">
+            <p id="timer">Calculando nuestro tiempo juntos...</p>
+        </div>
+    </header>
+
+    <section id="upload-section">
+        <h3>Presumir un nuevo detalle</h3>
+        <input type="text" id="caption" placeholder="¿Qué detalle quieres presumir?">
+        <input type="date" id="post-date">
+
+        <div class="file-upload-wrapper">
+            <label for="imageInput" class="custom-file-upload">
+                <span class="icon">📷</span> Seleccionar foto
+            </label>
+            <input type="file" id="imageInput" accept="image/*" class="hidden-input">
+            <span id="file-chosen" class="file-name">Ningún archivo seleccionado</span>
+            
+            <div id="image-preview-container">
+                <img id="image-preview" src="" alt="Previsualización">
+            </div>
+        </div>
+
+        <button id="btn-upload">Publicar Momento ✨</button>
+    </section>
+
+    <section id="coupons-section">
+        <h3>Mis Cupones Canjeables 🎟️</h3>
+        <div class="coupons-grid">
+            <button id="coupon-1" class="coupon" onclick="canjearCupon('coupon-1', 'regalitooop')">regalitooop</button>
+            <button id="coupon-2" class="coupon" onclick="canjearCupon('coupon-2', 'un masaje relajante')">Masaje Relajante</button>
+            <button id="coupon-3" class="coupon" onclick="canjearCupon('coupon-3', 'beso y abrazo gratis')">beso y abrazo gratiss</button>
+        </div>
+        <button id="btn-reset-coupons" onclick="resetearCupones()">🔄 Reiniciar Cupones</button>
+    </section>
+
+    <main id="feed"></main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
